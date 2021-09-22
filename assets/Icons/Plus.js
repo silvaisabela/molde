@@ -1,7 +1,14 @@
-import * as React from "react";
+import * as React from 'react'
+import { Number, String } from 'prop-types'
 import Svg, { Path } from 'react-native-svg'
 
-const Plus = ({ width = 21, height = 21, color = "#231F20", ...props }) => {
+const propTypes = {
+  width: Number,
+  height: Number,
+  color: String
+}
+
+const Plus = ({ width = 21, height = 21, color = '#231F20', ...props }) => {
   return (
     <Svg
       width={width}
@@ -17,7 +24,9 @@ const Plus = ({ width = 21, height = 21, color = "#231F20", ...props }) => {
         d="M1 10.879h19M10.985 20V1"
       />
     </Svg>
-  );
+  )
 }
 
-export { Plus };
+Plus.propTypes = propTypes
+
+export { Plus }

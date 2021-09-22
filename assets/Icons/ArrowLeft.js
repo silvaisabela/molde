@@ -1,7 +1,14 @@
-import * as React from "react";
+import * as React from 'react'
+import { Number, String } from 'prop-types'
 import Svg, { Path } from 'react-native-svg'
 
-const ArrowLeft = ({ width = 31, height = 16, color = "#231F20", ...props }) => {
+const propTypes = {
+  width: Number,
+  height: Number,
+  color: String
+}
+
+const ArrowLeft = ({ width = 31, height = 16, color = '#231F20', ...props }) => {
   return (
     <Svg
       width={width}
@@ -16,4 +23,6 @@ const ArrowLeft = ({ width = 31, height = 16, color = "#231F20", ...props }) => 
   )
 }
 
-export { ArrowLeft };
+ArrowLeft.propTypes = propTypes
+
+export { ArrowLeft }
