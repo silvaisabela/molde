@@ -21,4 +21,3 @@ const Plus = ({ width = 21, height = 21, color = "#231F20", ...props }) => {
 }
 
 export { Plus };
-
