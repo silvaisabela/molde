@@ -1,5 +1,5 @@
 import * as React from "react";
-import Svg, { Path } from 'react-native-svg'
+import Svg, { Path } from 'react-native-svg';
 
 const Plus = ({ width = 21, height = 21, color = "#231F20", ...props }) => {
   return (
