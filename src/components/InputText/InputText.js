@@ -26,7 +26,7 @@ const InputText = ({ text = 'Digite aqui', plus, onPress, checked, noIcon }) => 
               ? null
               : plus
                 ? <Pressable style={InputTextStyles.icon} onPress={onPress}>
-                <Plus/>
+                <Plus color="#7963FF"/>
             </Pressable>
                 : checked ? <Check style={InputTextStyles.icon}/> : <Uncheck style={InputTextStyles.icon}/>}
 
