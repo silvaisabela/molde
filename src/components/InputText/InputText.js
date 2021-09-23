@@ -2,9 +2,7 @@ import React from 'react'
 import { func, String, Boolean } from 'prop-types'
 import { Pressable, View, TextInput } from 'react-native'
 import { InputTextStyles } from './InputText.style'
-import { Plus } from '../../../assets/Icons'
-import { Check } from '../../../assets/Icons/Check'
-import Uncheck from '../../../assets/Icons/Uncheck'
+import { Check, Uncheck, Plus } from '../../../assets/Icons'
 import theme from '../../styles/theme.style'
 
 const propTypes = {
