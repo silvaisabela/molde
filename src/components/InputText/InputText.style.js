@@ -1,6 +1,12 @@
 import { StyleSheet } from 'react-native'
 import theme from '../../styles/theme.style'
 
+const baseMessage = {
+  fontWeight: theme.fontWeight.light,
+  marginLeft: 5,
+  marginTop: 5
+}
+
 const InputTextStyles = StyleSheet.create({
   container: {
     alignItems: 'center',
@@ -10,16 +16,20 @@ const InputTextStyles = StyleSheet.create({
     borderRadius: 10,
     width: 300,
     height: 42,
-    backgroundColor: theme.color.tertiary
+    backgroundColor: theme.color.tertiary,
+    marginTop: 30
   },
   textInput: {
     width: 240,
     color: theme.fontColor.primary
   },
   error: {
+    ...baseMessage,
     fontWeight: theme.fontWeight.light,
-    marginLeft: 5,
-    marginTop: 5
+    color: theme.color.error
+  },
+  default: {
+    ...baseMessage
   }
 })
 

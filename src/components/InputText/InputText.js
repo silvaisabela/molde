@@ -11,12 +11,12 @@ const propTypes = {
   plus: Boolean,
   check: Boolean,
   noIcon: Boolean,
-  error: Boolean,
   messageError: String,
+  messageDefault: String,
   onChange: func
 }
 
-const InputText = ({ text = 'Digite aqui', plus, onPress, check, noIcon, onChange, error, messageError = 'Texto inválido' }) => (
+const InputText = ({ text = 'Digite aqui', plus, onPress, check, noIcon, onChange, messageError, messageDefault }) => (
     <Pressable >
       <View style={InputTextStyles.container}>
             <TextInput
@@ -32,7 +32,8 @@ const InputText = ({ text = 'Digite aqui', plus, onPress, check, noIcon, onChang
             </Pressable>
                 : check ? <Check/> : <Uncheck/>}
       </View>
-      {error ? <Text style={InputTextStyles.error}>{messageError}</Text> : null}
+      {messageDefault ? <Text style={InputTextStyles.default}>{messageDefault}</Text> : null}
+      {messageError ? <Text style={InputTextStyles.error}>{messageError}</Text> : null}
     </Pressable>
 )
 
