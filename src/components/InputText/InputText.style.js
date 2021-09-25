@@ -15,6 +15,11 @@ const InputTextStyles = StyleSheet.create({
   textInput: {
     width: 240,
     color: theme.fontColor.primary
+  },
+  error: {
+    fontWeight: theme.fontWeight.light,
+    marginLeft: 5,
+    marginTop: 5
   }
 })
 
