@@ -2,22 +2,19 @@ import { StyleSheet } from 'react-native'
 import theme from '../../styles/theme.style'
 
 const InputPasswordStyles = StyleSheet.create({
-  inputPassword: {
+  container: {
     alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     padding: 12,
     borderRadius: 10,
     width: 300,
     height: 42,
     backgroundColor: theme.color.tertiary
   },
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  icon: {
-    position: 'absolute',
-    right: 12
+  textInput: {
+    width: 240,
+    color: theme.fontColor.primary
   }
 })
 
