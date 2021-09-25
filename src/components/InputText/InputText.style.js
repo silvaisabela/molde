@@ -3,8 +3,7 @@ import theme from '../../styles/theme.style'
 
 const baseMessage = {
   fontWeight: theme.fontWeight.light,
-  marginLeft: 5,
-  marginTop: 5
+  marginLeft: 5
 }
 
 const InputTextStyles = StyleSheet.create({
@@ -17,7 +16,8 @@ const InputTextStyles = StyleSheet.create({
     width: 300,
     height: 42,
     backgroundColor: theme.color.tertiary,
-    marginTop: 30
+    marginTop: 30,
+    marginBottom: 5
   },
   textInput: {
     width: 240,
