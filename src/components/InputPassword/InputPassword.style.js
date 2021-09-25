@@ -3,8 +3,8 @@ import theme from '../../styles/theme.style'
 
 const baseMessage = {
   fontWeight: theme.fontWeight.light,
-  marginLeft: 5,
-  marginTop: 5
+  marginLeft: 5
+
 }
 
 const InputPasswordStyles = StyleSheet.create({
@@ -16,7 +16,8 @@ const InputPasswordStyles = StyleSheet.create({
     borderRadius: 10,
     width: 300,
     height: 42,
-    backgroundColor: theme.color.tertiary
+    backgroundColor: theme.color.tertiary,
+    marginBottom: 5
   },
   textInput: {
     width: 240,
@@ -25,8 +26,6 @@ const InputPasswordStyles = StyleSheet.create({
   error: {
     ...baseMessage,
     fontWeight: theme.fontWeight.light,
-    marginLeft: 5,
-    marginTop: 5,
     color: theme.color.error
   },
   default: {
