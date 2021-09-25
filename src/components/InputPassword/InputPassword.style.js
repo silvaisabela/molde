@@ -19,8 +19,10 @@ const InputPasswordStyles = StyleSheet.create({
   error: {
     fontWeight: theme.fontWeight.light,
     marginLeft: 5,
-    marginTop: 5
+    marginTop: 5,
+    color: theme.color.error
   }
+
 })
 
 export { InputPasswordStyles }
