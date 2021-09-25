@@ -1,2 +1,5 @@
 export * from './ArrowLeft'
 export * from './Plus'
+export * from './Add'
+export * from './YellowShape'
+export * from './PurpleShape'

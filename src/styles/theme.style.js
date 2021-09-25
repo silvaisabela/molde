@@ -12,6 +12,7 @@ export default {
     primary: '#2DC1A6',
     secondary: '#7963FF',
     tertiary: '#F4F4F4',
+    black: '#231F20',
     error: '#DC3838'
   }
 }
