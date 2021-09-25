@@ -1,6 +1,12 @@
 import { StyleSheet } from 'react-native'
 import theme from '../../styles/theme.style'
 
+const baseMessage = {
+  fontWeight: theme.fontWeight.light,
+  marginLeft: 5,
+  marginTop: 5
+}
+
 const InputPasswordStyles = StyleSheet.create({
   container: {
     alignItems: 'center',
@@ -17,10 +23,14 @@ const InputPasswordStyles = StyleSheet.create({
     color: theme.fontColor.primary
   },
   error: {
+    ...baseMessage,
     fontWeight: theme.fontWeight.light,
     marginLeft: 5,
     marginTop: 5,
     color: theme.color.error
+  },
+  default: {
+    ...baseMessage
   }
 
 })

@@ -8,10 +8,11 @@ const propTypes = {
   onPress: func,
   text: String,
   hidePassword: Boolean,
-  messageError: String
+  messageError: String,
+  messageDefault: String
 }
 
-const InputPassword = ({ text = 'Digite a senha', onPress, hidePassword, messageError, ...props }) => (
+const InputPassword = ({ text = 'Digite a senha', onPress, hidePassword, messageDefault, messageError, ...props }) => (
     <Pressable>
       <View style={InputPasswordStyles.container}>
           <TextInput
@@ -23,7 +24,8 @@ const InputPassword = ({ text = 'Digite a senha', onPress, hidePassword, message
             ? <Pressable onPress={onPress}><ClosePassword/></Pressable>
             : <Pressable onPress={onPress}><OpenPassword/></Pressable> }
       </View>
-     <Text style={InputPasswordStyles.error}>{messageError}</Text>
+      {messageDefault ? <Text style={InputPasswordStyles.default}>{messageDefault}</Text> : null}
+      {messageError ? <Text style={InputPasswordStyles.error}>{messageError}</Text> : null}
     </Pressable>
 )
 
