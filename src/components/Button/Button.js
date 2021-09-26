@@ -1,5 +1,5 @@
 import React from 'react'
-import { func, String, Boolean } from 'prop-types'
+import { func } from 'prop-types'
 import { Text, Pressable, View } from 'react-native'
 import { ButtonStyles } from './Button.style'
 import { ArrowLeft, Plus } from '../../../assets/Icons'

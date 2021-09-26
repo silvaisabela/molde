@@ -14,24 +14,24 @@ const propTypes = {
   onChange: func
 }
 
-const InputText = ({ text = 'Digite aqui', plus, onPress, check, noIcon, onChange }) => (
-    <Pressable>
-        <View style={InputTextStyles.container}>
-            <TextInput
-            placeholder={text}
-            style={InputTextStyles.inputText}
-            onChange={onChange}
-            />
-            {noIcon
-              ? null
-              : plus
-                ? <Pressable style={InputTextStyles.icon} onPress={onPress}>
-                <Plus color={theme.color.secondary}/>
-            </Pressable>
-                : check ? <Check style={InputTextStyles.icon}/> : <Uncheck style={InputTextStyles.icon}/>}
+const InputText = ({ text, plus, onPress, check, noIcon, onChange }) => (
+  <Pressable>
+    <View style={InputTextStyles.container}>
+      <TextInput
+        placeholder={text}
+        style={InputTextStyles.inputText}
+        onChange={onChange}
+      />
+      {noIcon
+        ? null
+        : plus
+          ? <Pressable style={InputTextStyles.icon} onPress={onPress}>
+            <Plus color={theme.color.secondary} />
+          </Pressable>
+          : check ? <Check style={InputTextStyles.icon} /> : <Uncheck style={InputTextStyles.icon} />}
 
-        </View>
-    </Pressable>
+    </View>
+  </Pressable>
 )
 
 InputText.propTypes = propTypes
