@@ -1,14 +1,14 @@
 import React from 'react'
-import { func } from 'prop-types'
+import { func, string, boolean } from 'prop-types'
 import { Text, Pressable, View } from 'react-native'
 import { ButtonStyles } from './Button.style'
 import { ArrowLeft, Plus } from '../../../assets/Icons'
 
 const propTypes = {
   onPress: func.isRequired,
-  text: String,
-  type: String,
-  plus: Boolean
+  text: string,
+  type: string,
+  plus: boolean
 }
 
 const buttonThemes = {
