@@ -2,34 +2,40 @@ import { StyleSheet } from 'react-native'
 import theme from '../../styles/theme.style'
 
 const baseMessage = {
-  fontWeight: theme.fontWeight.light,
-  marginLeft: 5
+  marginTop: 10,
+  fontWeight: theme.fontWeight.light
 }
 
 const InputTextStyles = StyleSheet.create({
   container: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    padding: 12,
+    paddingLeft: 12,
+    paddingRight: 12,
     borderRadius: 10,
     width: 300,
     height: 42,
-    backgroundColor: theme.color.tertiary,
-    marginTop: 30,
-    marginBottom: 5
+    backgroundColor: theme.color.tertiary
+
   },
-  textInput: {
-    width: 240,
+  containerInput: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    height: '100%'
+  },
+  input: {
+    width: '100%',
     color: theme.fontColor.primary
   },
   error: {
     ...baseMessage,
-    fontWeight: theme.fontWeight.light,
     color: theme.color.error
   },
   default: {
     ...baseMessage
+  },
+  baseIcon: {
+    marginLeft: 10
   }
 })
 
