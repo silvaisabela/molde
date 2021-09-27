@@ -61,7 +61,7 @@ const InputText = ({
   onClickPlus,
   ...props
 }) => (
-  <Pressable>
+  <View>
     <View style={InputTextStyles.container}>
       <View style={InputTextStyles.containerInput}>
         <Input
@@ -76,7 +76,7 @@ const InputText = ({
     {(helperText || errorMessage) && (
       <View>{InputMessage(errorMessage, helperText)}</View>
     )}
-  </Pressable>
+  </View>
 )
 
 InputText.propTypes = propTypes

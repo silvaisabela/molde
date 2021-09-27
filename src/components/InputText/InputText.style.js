@@ -25,6 +25,7 @@ const InputTextStyles = StyleSheet.create({
   },
   input: {
     width: '100%',
+    maxWidth: 250,
     color: theme.fontColor.primary
   },
   error: {
