@@ -7,13 +7,13 @@ export default function App () {
   return (
     <View style={styles.container}>
 
-      <Card size="small" text="Adicionar" icon="add"/>
+      <Card type="regular" size="small" title="Adicionar" icon="add"/>
 
-      <Card text="O que é?" icon="yellow-shape"/>
+      <Card type="regular" title="O que é?" icon="yellow-shape" text=""/>
 
-      <Card size="medium" text="Suas frases" icon="purple-shape"/>
+      <Card type="regular" size="medium" title="Suas frases" icon="purple-shape"/>
 
-      <Card size="big"/>
+      <Card type="link" size="big" title="Quero conhecer!" paragraph="Aprenda código morse e conheça uma nova forma de ouvir quando enviarmos o que identificamos para o seu dispositivo."/>
 
       <StatusBar style="auto" />
     </View >

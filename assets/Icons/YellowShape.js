@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Number, String } from 'prop-types'
 import Svg, { Path } from 'react-native-svg'
 
 const propTypes = {

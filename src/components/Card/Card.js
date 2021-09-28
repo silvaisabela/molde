@@ -5,22 +5,36 @@ import { CardStyles } from './Card.style'
 import { Add, PurpleShape, YellowShape } from '../../../assets/Icons'
 
 const propTypes = {
-  onPress: func.isRequired,
-  text: String,
+  onPress: func,
+  title: String,
   size: String,
-  icon: String
+  icon: String,
+  type: String,
+  paragraph: String
 }
 
 const CardSizes = {
-  normal: CardStyles.normal,
+  regular: CardStyles.regular,
   small: CardStyles.small,
   medium: CardStyles.medium,
   big: CardStyles.big
 }
 
-const Card = ({ onPress, text, icon, size = 'normal', ...props }) => (
+const TitleType = {
+  regular: CardStyles.title,
+  link: CardStyles.link
+}
+
+const ContainerType = {
+  regular: CardStyles.columnContainer,
+  small: CardStyles.rowContainer,
+  medium: CardStyles.columnContainer,
+  big: CardStyles.rowContainer
+}
+
+const Card = ({ onPress, type, title, icon, paragraph, size = 'regular', ...props }) => (
   <Pressable style={CardSizes[size]} onPress={onPress} {...props}>
-    <View style={CardStyles.container} >
+    <View style={ContainerType[size]} >
       {(icon === 'add')
         ? <Add style={CardStyles.icon} />
         : (icon === 'purple-shape')
@@ -28,7 +42,8 @@ const Card = ({ onPress, text, icon, size = 'normal', ...props }) => (
             : (icon === 'yellow-shape')
                 ? <YellowShape style={CardStyles.shape} />
                 : <YellowShape display="none"/>}
-      <Text style={CardStyles.text}>{text}</Text>
+      {paragraph ? <Text style={CardStyles.paragraph}>{paragraph}</Text> : null }
+      {title ? <Text style={TitleType[type]}>{title}</Text> : null }
     </View>
   </Pressable>
 )

@@ -2,22 +2,33 @@ import { StyleSheet } from 'react-native'
 import theme from '../../styles/theme.style'
 
 const baseCard = {
+  backgroundColor: theme.color.black,
   borderRadius: 10,
   elevation: 3,
-  backgroundColor: theme.color.black,
   height: 114,
   padding: 12,
+  paddingTop: 0,
   margin: 10 // TIRAR DEPOIS
 }
 
+const baseText = {
+  fontSize: 18,
+  lineHeight: 21,
+  letterSpacing: 0.25
+}
+
+const baseContainer = {
+  height: '100%'
+}
+
 const CardStyles = StyleSheet.create({
-  normal: {
+  regular: {
     ...baseCard,
     width: 157
   },
   small: {
     ...baseCard,
-    width: 98
+    width: 97
   },
   medium: {
     ...baseCard,
@@ -28,26 +39,38 @@ const CardStyles = StyleSheet.create({
     height: 167,
     width: 335
   },
-  container: {
+  columnContainer: {
+    ...baseContainer,
     flexDirection: 'column',
-    justifyContent: 'space-between',
-    width: '100%',
-    height: '100%'
+    justifyContent: 'space-between'
   },
-  text: {
-    fontSize: 18,
-    lineHeight: 21,
-    fontWeight: theme.fontWeight.regular,
-    letterSpacing: 0.25,
-    color: theme.fontColor.invert
+  rowContainer: {
+    ...baseContainer,
+    justifyContent: 'flex-end',
+    alignItems: 'center'
+  },
+  title: {
+    ...baseText,
+    color: theme.fontColor.invert,
+    fontWeight: theme.fontWeight.regular
+  },
+  link: {
+    ...baseText,
+    fontWeight: theme.fontWeight.bold,
+    color: theme.color.secondary,
+    alignSelf: 'flex-end'
   },
   icon: {
-    alignSelf: 'center',
-    top: '30%'
+    marginBottom: 20
   },
   shape: {
-    alignSelf: 'flex-end',
-    marginTop: -12
+    alignSelf: 'flex-end'
+  },
+  paragraph: {
+    ...baseText,
+    fontWeight: theme.fontWeight.light,
+    color: theme.fontColor.invert,
+    marginBottom: 30
   }
 })
 
