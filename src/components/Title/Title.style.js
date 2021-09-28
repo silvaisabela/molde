@@ -15,6 +15,11 @@ const TitleStyles = StyleSheet.create({
   bold: {
     ...baseTitle,
     fontWeight: theme.fontWeight.bold
+  },
+  bigger: {
+    ...baseTitle,
+    fontSize: 40,
+    fontWeight: theme.fontWeight.bold
   }
 })
 
