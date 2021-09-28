@@ -8,7 +8,6 @@ const baseCard = {
   height: 114,
   padding: 12,
   paddingTop: 0,
-  margin: 10 // TIRAR DEPOIS
 }
 
 const baseText = {
