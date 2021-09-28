@@ -1,5 +1,5 @@
-import React from 'react'
-import { func, String, Boolean } from 'prop-types'
+import React, { useState } from 'react'
+import { func, String } from 'prop-types'
 import { Pressable, TextInput, View, Text } from 'react-native'
 import { InputPasswordStyles } from './InputPassword.style'
 import { ClosePassword, OpenPassword } from '../../../assets/Icons'
@@ -7,28 +7,42 @@ import { ClosePassword, OpenPassword } from '../../../assets/Icons'
 const propTypes = {
   onPress: func,
   text: String,
-  hidePassword: Boolean,
-  messageError: String,
-  messageDefault: String
+  errorMessage: String,
+  helperText: String
+}
+const InputMessage = (errorMessage, helperText) => {
+  if (errorMessage) {
+    return <Text style={InputPasswordStyles.error}>{errorMessage}</Text>
+  }
+
+  return <Text style={InputPasswordStyles.default}>{helperText}</Text>
 }
 
-const InputPassword = ({ text = 'Digite a senha', onPress, hidePassword, messageDefault, messageError, ...props }) => (
-    <Pressable>
+const InputPassword = ({ text = 'Digite a senha', onPress, helperText, errorMessage, ...props }) => {
+  const [showPassword, setShowPassword] = useState(false)
+
+  const changeShowPassword = () => {
+    setShowPassword(!showPassword)
+  }
+
+  return (
+      <Pressable>
       <View style={InputPasswordStyles.container}>
           <TextInput
           placeholder={text}
           style={InputPasswordStyles.textInput}
-          secureTextEntry={hidePassword}
+          secureTextEntry={showPassword}
           />
-          {hidePassword
-            ? <Pressable onPress={onPress}><ClosePassword/></Pressable>
-            : <Pressable onPress={onPress}><OpenPassword/></Pressable> }
+          <Pressable onPress={changeShowPassword}>{showPassword
+            ? <ClosePassword/>
+            : <OpenPassword/>}</Pressable>
       </View>
-      {messageDefault ? <Text style={InputPasswordStyles.default}>{messageDefault}</Text> : null}
-      {messageError ? <Text style={InputPasswordStyles.error}>{messageError}</Text> : null}
+      {(helperText || errorMessage) && (
+      <View>{InputMessage(errorMessage, helperText)}</View>
+      )}
     </Pressable>
-)
-
+  )
+}
 InputPassword.propTypes = propTypes
 
 export { InputPassword }
