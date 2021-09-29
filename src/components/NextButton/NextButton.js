@@ -2,7 +2,7 @@ import React from 'react'
 import { func, String, Boolean } from 'prop-types'
 import { Text, Pressable, View } from 'react-native'
 import { NextButtonStyles } from './NextButton.style'
-import { ArrowRight } from '../../../assets/Icons/ArrowRight'
+import { ArrowRight } from '../../../assets/Icons'
 
 const propTypes = {
   onPress: func,
