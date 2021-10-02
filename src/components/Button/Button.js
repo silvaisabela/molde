@@ -8,7 +8,6 @@ const propTypes = {
   onPress: func.isRequired,
   text: String,
   type: String,
-  plus: Boolean
 }
 
 const buttonThemes = {
