@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import { Number, String } from 'prop-types'
 import Svg, { Path } from 'react-native-svg'
 
@@ -24,10 +24,9 @@ const Close = ({ width = 40, height = 40, color = '#231F20', ...props }) => {
         d="M10.934 28.819l18.585-17.144M28.923 28.937L11.779 10.352"
       />
     </Svg>
-  );
+  )
 }
 
 Close.propTypes = propTypes
 
-export { Close };
-
+export { Close }

@@ -4,7 +4,7 @@ const BackButtonStyles = StyleSheet.create({
   button: {
     width: 50,
     height: 50,
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   container: {
     alignItems: 'center',
