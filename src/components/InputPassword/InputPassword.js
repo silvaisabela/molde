@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
-import { func, String } from 'prop-types'
 import { Pressable, TextInput, View, Text } from 'react-native'
+import { func, string } from 'prop-types'
+import { EyeClose, EyeOpen } from '../../../assets/Icons'
 import { InputPasswordStyles } from './InputPassword.style'
-import { ClosePassword, OpenPassword } from '../../../assets/Icons'
 
 const propTypes = {
   onPress: func,
-  text: String,
-  errorMessage: String,
-  helperText: String
+  text: string,
+  errorMessage: string,
+  helperText: string
 }
+
 const InputMessage = (errorMessage, helperText) => {
   if (errorMessage) {
     return <Text style={InputPasswordStyles.error}>{errorMessage}</Text>
@@ -26,19 +27,19 @@ const InputPassword = ({ text = 'Digite a senha', onPress, helperText, errorMess
   }
 
   return (
-      <Pressable>
+    <Pressable>
       <View style={InputPasswordStyles.container}>
-          <TextInput
+        <TextInput
           placeholder={text}
           style={InputPasswordStyles.textInput}
           secureTextEntry={showPassword}
-          />
-          <Pressable onPress={changeShowPassword}>{showPassword
-            ? <ClosePassword/>
-            : <OpenPassword/>}</Pressable>
+        />
+        <Pressable onPress={changeShowPassword}>{showPassword
+          ? <EyeClose />
+          : <EyeOpen />}</Pressable>
       </View>
       {(helperText || errorMessage) && (
-      <View>{InputMessage(errorMessage, helperText)}</View>
+        <View>{InputMessage(errorMessage, helperText)}</View>
       )}
     </Pressable>
   )
