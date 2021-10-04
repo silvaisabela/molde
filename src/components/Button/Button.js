@@ -1,29 +1,34 @@
 import React from 'react'
-import { func, String, Boolean } from 'prop-types'
+import { func, string, node, boolean } from 'prop-types'
 import { Text, Pressable, View } from 'react-native'
-import { ButtonStyles } from './Button.style'
-import { ArrowLeft, Plus } from '../../../assets/Icons'
+import { buttonThemes, ButtonStyles } from './Button.style'
 
 const propTypes = {
   onPress: func.isRequired,
-  text: String,
-  type: String,
+  children: node,
+  type: string,
+  icon: node,
+  large: boolean
 }
 
-const buttonThemes = {
-  primary: ButtonStyles.button,
-  secondary: ButtonStyles.buttonSecondary,
-  tertiary: ButtonStyles.buttonTertiary
+const Button = ({
+  children,
+  onPress,
+  icon,
+  type = 'primary',
+  large = false,
+  ...props
+}) => {
+  const theme = buttonThemes(large)
+  return (
+    <Pressable style={theme[type]} onPress={onPress} {...props}>
+      <View style={ButtonStyles.container} >
+        <Text style={ButtonStyles.text}>{children}</Text>
+        {icon}
+      </View>
+    </Pressable>
+  )
 }
-
-const Button = ({ onPress, text, plus, type = 'primary', ...props }) => (
-  <Pressable style={buttonThemes[type]} onPress={onPress} {...props}>
-    <View style={ButtonStyles.container} >
-      <Text style={ButtonStyles.text}>{text}</Text>
-      {plus ? <Plus /> : <ArrowLeft aria-hidden="true" />}
-    </View>
-  </Pressable>
-)
 
 Button.propTypes = propTypes
 

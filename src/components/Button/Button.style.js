@@ -1,41 +1,53 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 import theme from '../../styles/theme.style'
 
-const baseButton = {
-  alignItems: 'center',
-  justifyContent: 'center',
-  padding: 12,
-  borderRadius: 10,
-  elevation: 3,
-  width: 300
+const window = Dimensions.get('window')
+
+const baseButton = (large) => {
+  return {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 12,
+    borderRadius: 10,
+    elevation: 3,
+    width: large ? window.width : '40%',
+    height: 42
+  }
 }
 
 const ButtonStyles = StyleSheet.create({
-  button: {
-    ...baseButton,
-    backgroundColor: theme.color.primary
-  },
-  buttonSecondary: {
-    ...baseButton,
-    backgroundColor: theme.color.secondary
-  },
-  buttonTertiary: {
-    ...baseButton,
-    backgroundColor: theme.color.tertiary
-  },
   container: {
     flexDirection: 'row',
     alignItems: 'center',
     width: '100%',
+    height: '100%',
     justifyContent: 'space-between'
   },
   text: {
-    fontSize: 18,
-    lineHeight: 21,
+    fontSize: theme.fontSize.sm,
     fontWeight: theme.fontWeight.regular,
-    letterSpacing: 0.25,
-    color: theme.fontColor.primary
+    letterSpacing: theme.letterSpacing.sm,
+    color: theme.fontColor.primary,
+    marginRight: 16
   }
 })
 
-export { ButtonStyles }
+const buttonThemes = (large) => {
+  const base = baseButton(large)
+  return {
+    primary: {
+      ...base,
+      backgroundColor: theme.color.primary
+    },
+    secondary: {
+      ...base,
+      backgroundColor: theme.color.secondary
+    },
+    tertiary: {
+      ...base,
+      backgroundColor: theme.color.tertiary
+    }
+  }
+}
+
+export { ButtonStyles, buttonThemes }
