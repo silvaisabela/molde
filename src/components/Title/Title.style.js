@@ -2,25 +2,46 @@ import { StyleSheet } from 'react-native'
 import theme from '../../styles/theme.style'
 
 const baseTitle = {
-  fontSize: 36,
   color: theme.fontColor.primary,
-  fontFamily: 'Roboto'
+  fontFamily: 'Roboto',
+  letterSpacing: theme.letterSpacing.sm
 }
 
-const TitleStyles = StyleSheet.create({
+const titleWeight = {
   light: {
     ...baseTitle,
     fontWeight: theme.fontWeight.light
   },
+  regular: {
+    ...baseTitle,
+    fontWeight: theme.fontWeight.regular
+  },
   bold: {
     ...baseTitle,
     fontWeight: theme.fontWeight.bold
-  },
-  bigger: {
-    ...baseTitle,
-    fontSize: 40,
-    fontWeight: theme.fontWeight.bold
   }
-})
+}
 
-export { TitleStyles }
+const titleSize = {
+  xs: {
+    fontSize: theme.fontSize.xs
+  },
+  sm: {
+    fontSize: theme.fontSize.sm
+  },
+  md: {
+    fontSize: theme.fontSize.md
+  },
+  lg: {
+    fontSize: theme.fontSize.md
+  },
+  xl: {
+    fontSize: theme.fontSize.xl
+  }
+}
+
+const titleStyles = (weight, size) => {
+  return StyleSheet.create({ text: { ...baseTitle, ...titleWeight[weight], ...titleSize[size] } })
+}
+
+export { titleStyles }

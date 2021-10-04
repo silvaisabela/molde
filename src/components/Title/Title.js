@@ -1,17 +1,18 @@
 import React from 'react'
-import { String } from 'prop-types'
+import { string } from 'prop-types'
 import { Text, View } from 'react-native'
-import { TitleStyles } from './Title.style'
+import { titleStyles } from './Title.style'
 
 const propTypes = {
-  type: String,
-  text: String
+  weight: string,
+  text: string,
+  size: string
 }
 
-const Title = ({ type = 'light', text, ...props }) => (
-    <View>
-        <Text style={TitleStyles[type]}>{text}</Text>
-    </View>
+const Title = ({ weight = 'light', size = 'sm', text }) => (
+  <View>
+    <Text style={titleStyles(weight, size).text}>{text}</Text>
+  </View>
 )
 
 Title.propTypes = propTypes
