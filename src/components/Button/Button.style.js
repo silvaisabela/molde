@@ -7,7 +7,8 @@ const baseButton = {
   padding: 12,
   borderRadius: 10,
   elevation: 3,
-  width: 300
+  width: 300,
+  height: 42
 }
 
 const ButtonStyles = StyleSheet.create({
@@ -27,6 +28,7 @@ const ButtonStyles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     width: '100%',
+    height: '100%',
     justifyContent: 'space-between'
   },
   text: {
