@@ -1,3 +1,7 @@
 export * from './ArrowLeft'
 export * from './Plus'
 export * from './ArrowRight'
+export * from './Check'
+export * from './Uncheck'
+export * from './EyeClose'
+export * from './EyeOpen'
