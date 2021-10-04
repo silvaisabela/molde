@@ -1,4 +1,5 @@
 export * from './ArrowLeft'
+export * from './ArrowRight'
 export * from './Plus'
 export * from './Check'
 export * from './Uncheck'
