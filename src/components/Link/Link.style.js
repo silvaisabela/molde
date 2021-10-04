@@ -1,22 +1,15 @@
 import { StyleSheet } from 'react-native'
 import theme from '../../styles/theme.style'
 
-const baseLink = {
-  alignItems: 'center',
-  justifyContent: 'center',
-  padding: 12,
-  borderRadius: 10,
-  elevation: 3,
-  width: 300
-}
-
 const LinkStyles = StyleSheet.create({
-  
+  container: {
+    padding: 12,
+    backgroundColor: 'transparent'
+  },
   text: {
-    fontSize: 18,
-    lineHeight: 21,
+    fontSize: theme.fontSize.lg,
+    letterSpacing: theme.letterSpacing.sm,
     fontWeight: theme.fontWeight.regular,
-    letterSpacing: 0.25,
     color: theme.fontColor.primary
   }
 })

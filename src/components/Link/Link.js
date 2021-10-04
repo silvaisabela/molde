@@ -1,24 +1,17 @@
 import React from 'react'
-import { func, String, Boolean } from 'prop-types'
+import { func, string } from 'prop-types'
 import { Text, Pressable, View } from 'react-native'
 import { LinkStyles } from './Link.style'
-import { ArrowLeft, Plus } from '../../../assets/Icons'
 
 const propTypes = {
   onPress: func.isRequired,
-  text: String,
-  type: String,
-
+  text: string
 }
 
-const linkThemes = {
-  tertiary: LinkStyles.linkTertiary
-}
-
-const Link = ({ onPress, text = "Já tenho uma conta", type = 'primary', ...props }) => (
-  <Pressable style={linkThemes[type]} onPress={onPress} {...props}>
+const Link = ({ onPress, text, ...props }) => (
+  <Pressable style={LinkStyles.container} onPress={onPress} {...props}>
     <View>
-    <Text style={LinkStyles.text}>{text}</Text>
+      <Text style={LinkStyles.text}>{text}</Text>
     </View>
   </Pressable>
 )
