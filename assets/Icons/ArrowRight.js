@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import Svg, { Path } from 'react-native-svg'
 
 const propTypes = {
@@ -23,10 +23,9 @@ const ArrowRight = ({ width = 10, height = 13, color = '#2B2B2B', ...props }) =>
         strokeLinecap="round"
       />
     </Svg>
-  );
+  )
 }
 
 ArrowRight.propTypes = propTypes
 
-export { ArrowRight };
-
+export { ArrowRight }

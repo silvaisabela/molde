@@ -10,7 +10,7 @@ const NextButtonStyles = StyleSheet.create({
     borderRadius: 10,
     elevation: 3,
     width: 140,
-    height: 30,
+    height: 30
   },
   container: {
     flexDirection: 'row',
