@@ -1,14 +1,14 @@
 import * as React from 'react'
-import { Number, String } from 'prop-types'
 import Svg, { Path } from 'react-native-svg'
+import { number, string } from 'prop-types'
 
 const propTypes = {
-  width: Number,
-  height: Number,
-  color: String
+  width: number,
+  height: number,
+  color: string
 }
 
-const ClosePassword = ({ width = 22, height = 12, color = '#231F20', ...props }) => {
+const EyeClose = ({ width = 22, height = 12, color = '#231F20', ...props }) => {
   return (
     <Svg
       width={width}
@@ -30,6 +30,6 @@ const ClosePassword = ({ width = 22, height = 12, color = '#231F20', ...props })
   )
 }
 
-ClosePassword.propTypes = propTypes
+EyeClose.propTypes = propTypes
 
-export { ClosePassword }
+export { EyeClose }
