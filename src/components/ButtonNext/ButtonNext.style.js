@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native'
 import theme from '../../styles/theme.style'
 
-const NextButtonStyles = StyleSheet.create({
+const ButtonNextStyles = StyleSheet.create({
   button: {
     backgroundColor: theme.color.primary,
     alignItems: 'center',
@@ -9,8 +9,8 @@ const NextButtonStyles = StyleSheet.create({
     padding: 12,
     borderRadius: 10,
     elevation: 3,
-    width: 140,
-    height: 30
+    width: 160,
+    height: 40
   },
   container: {
     flexDirection: 'row',
@@ -19,12 +19,11 @@ const NextButtonStyles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   text: {
-    fontSize: 16,
-    lineHeight: 21,
+    color: theme.fontColor.primary,
+    fontSize: theme.fontSize.sm,
     fontWeight: theme.fontWeight.regular,
-    letterSpacing: 0.25,
-    color: theme.fontColor.primary
+    letterSpacing: theme.letterSpacing.sm
   }
 })
 
-export { NextButtonStyles }
+export { ButtonNextStyles }
