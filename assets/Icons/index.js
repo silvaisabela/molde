@@ -1,6 +1,6 @@
 export * from './ArrowLeft'
-export * from './Plus'
 export * from './ArrowRight'
+export * from './Plus'
 export * from './Check'
 export * from './Uncheck'
 export * from './EyeClose'

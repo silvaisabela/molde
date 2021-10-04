@@ -1,10 +1,11 @@
 import * as React from 'react'
 import Svg, { Path } from 'react-native-svg'
+import { number, string } from 'prop-types'
 
 const propTypes = {
-  width: Number,
-  height: Number,
-  color: String
+  width: number,
+  height: number,
+  color: string
 }
 
 const ArrowRight = ({ width = 10, height = 13, color = '#2B2B2B', ...props }) => {
