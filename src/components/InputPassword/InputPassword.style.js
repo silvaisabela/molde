@@ -20,7 +20,9 @@ const InputPasswordStyles = StyleSheet.create({
     marginBottom: 5
   },
   textInput: {
+    height: '100%',
     width: 240,
+    justifyContent: 'center',
     color: theme.fontColor.primary
   },
   error: {
@@ -30,6 +32,10 @@ const InputPasswordStyles = StyleSheet.create({
   },
   default: {
     ...baseMessage
+  },
+  containerIcon: {
+    height: '100%',
+    justifyContent: 'center'
   }
 
 })

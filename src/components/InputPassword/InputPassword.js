@@ -34,9 +34,9 @@ const InputPassword = ({ text = 'Digite a senha', onPress, helperText, errorMess
           style={InputPasswordStyles.textInput}
           secureTextEntry={showPassword}
         />
-        <Pressable onPress={changeShowPassword}>{showPassword
-          ? <EyeClose />
-          : <EyeOpen />}</Pressable>
+        <Pressable style={InputPasswordStyles.containerIcon} onPress={changeShowPassword}>
+          {showPassword ? <EyeClose /> : <EyeOpen />}
+        </Pressable>
       </View>
       {(helperText || errorMessage) && (
         <View>{InputMessage(errorMessage, helperText)}</View>
