@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { number, string } from 'prop-types'
 import Svg, { Path } from 'react-native-svg'
+import { number, string } from 'prop-types'
 
 const propTypes = {
   width: number,
@@ -8,7 +8,7 @@ const propTypes = {
   color: string
 }
 
-const Plus = ({ width = 21, height = 21, color = '#231F20', ...props }) => {
+const ArrowRight = ({ width = 10, height = 13, color = '#2B2B2B', ...props }) => {
   return (
     <Svg
       width={width}
@@ -18,15 +18,15 @@ const Plus = ({ width = 21, height = 21, color = '#231F20', ...props }) => {
       {...props}
     >
       <Path
+        d="M1 12l7-5.5L1 1"
         stroke={color}
         strokeWidth={2}
         strokeLinecap="round"
-        d="M1 10.879h19M10.985 20V1"
       />
     </Svg>
   )
 }
 
-Plus.propTypes = propTypes
+ArrowRight.propTypes = propTypes
 
-export { Plus }
+export { ArrowRight }
