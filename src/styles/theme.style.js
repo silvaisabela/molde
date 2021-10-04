@@ -14,9 +14,9 @@ export default {
     '3xl': 24
   },
   letterSpacing: {
-    xs: '0.3',
-    sm: '0.5',
-    md: '1.5'
+    xs: 0.3,
+    sm: 0.5,
+    md: 1.5
   },
   lineHeight: {
     xs: 16,
