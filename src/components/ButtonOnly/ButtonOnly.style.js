@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-const BackButtonStyles = StyleSheet.create({
+const ButtonOnlyStyles = StyleSheet.create({
   button: {
     width: 50,
     height: 50,
@@ -13,4 +13,4 @@ const BackButtonStyles = StyleSheet.create({
   }
 })
 
-export { BackButtonStyles }
+export { ButtonOnlyStyles }
