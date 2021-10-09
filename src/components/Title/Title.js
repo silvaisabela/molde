@@ -5,13 +5,13 @@ import { titleStyles } from './Title.style'
 
 const propTypes = {
   weight: string,
-  text: string,
+  children: string,
   size: string
 }
 
-const Title = ({ weight = 'light', size = 'sm', text }) => (
+const Title = ({ weight = 'light', size = 'sm', children, ...props }) => (
   <View>
-    <Text style={titleStyles(weight, size).text}>{text}</Text>
+    <Text style={titleStyles(weight, size).text} {...props} >{children}</Text>
   </View>
 )
 

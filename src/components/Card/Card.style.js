@@ -7,13 +7,7 @@ const baseCard = {
   elevation: 3,
   height: 114,
   padding: 12,
-  paddingTop: 0,
-}
-
-const baseText = {
-  fontSize: 18,
-  lineHeight: 21,
-  letterSpacing: 0.25
+  paddingTop: 0
 }
 
 const baseContainer = {
@@ -33,7 +27,7 @@ const CardStyles = StyleSheet.create({
     ...baseCard,
     width: 227
   },
-  big: {
+  large: {
     ...baseCard,
     height: 167,
     width: 335
@@ -45,31 +39,14 @@ const CardStyles = StyleSheet.create({
   },
   rowContainer: {
     ...baseContainer,
-    justifyContent: 'flex-end',
-    alignItems: 'center'
-  },
-  title: {
-    ...baseText,
-    color: theme.fontColor.invert,
-    fontWeight: theme.fontWeight.regular
-  },
-  link: {
-    ...baseText,
-    fontWeight: theme.fontWeight.bold,
-    color: theme.color.secondary,
-    alignSelf: 'flex-end'
+    justifyContent: 'flex-end'
   },
   icon: {
-    marginBottom: 20
+    marginBottom: 20,
+    alignSelf: 'center'
   },
   shape: {
     alignSelf: 'flex-end'
-  },
-  paragraph: {
-    ...baseText,
-    fontWeight: theme.fontWeight.light,
-    color: theme.fontColor.invert,
-    marginBottom: 30
   }
 })
 

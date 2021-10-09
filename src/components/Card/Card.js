@@ -1,49 +1,46 @@
 import React from 'react'
-import { func, String } from 'prop-types'
-import { Text, Pressable, View } from 'react-native'
+import { func, String, node } from 'prop-types'
+import { Pressable, View } from 'react-native'
 import { CardStyles } from './Card.style'
 import { Add, PurpleShape, YellowShape } from '../../../assets/Icons'
 
 const propTypes = {
   onPress: func,
-  title: String,
   size: String,
   icon: String,
-  type: String,
-  paragraph: String
+  children: node
 }
 
 const CardSizes = {
   regular: CardStyles.regular,
   small: CardStyles.small,
   medium: CardStyles.medium,
-  big: CardStyles.big
-}
-
-const TitleType = {
-  regular: CardStyles.title,
-  link: CardStyles.link
+  large: CardStyles.large
 }
 
 const ContainerType = {
-  regular: CardStyles.columnContainer,
   small: CardStyles.rowContainer,
+  regular: CardStyles.columnContainer,
   medium: CardStyles.columnContainer,
-  big: CardStyles.rowContainer
+  large: CardStyles.rowContainer
 }
 
-const Card = ({ onPress, type, title, icon, paragraph, size = 'regular', ...props }) => (
+const IconType = {
+  small: <Add style={CardStyles.icon} />,
+  regular: <YellowShape style={CardStyles.shape} />,
+  medium: <PurpleShape style={CardStyles.shape} />
+}
+
+const Card = ({
+  onPress,
+  children,
+  size = 'regular',
+  ...props
+}) => (
   <Pressable style={CardSizes[size]} onPress={onPress} {...props}>
-    <View style={ContainerType[size]} >
-      {(icon === 'add')
-        ? <Add style={CardStyles.icon} />
-        : (icon === 'purple-shape')
-            ? <PurpleShape style={CardStyles.shape} />
-            : (icon === 'yellow-shape')
-                ? <YellowShape style={CardStyles.shape} />
-                : <YellowShape display="none"/>}
-      {paragraph ? <Text style={CardStyles.paragraph}>{paragraph}</Text> : null }
-      {title ? <Text style={TitleType[type]}>{title}</Text> : null }
+    <View style={ContainerType[size]}>
+      {IconType[size] && IconType[size]}
+      {children}
     </View>
   </Pressable>
 )

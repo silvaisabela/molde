@@ -1,17 +1,17 @@
 import React from 'react'
-import { func, string } from 'prop-types'
+import { func, node } from 'prop-types'
 import { Text, Pressable, View } from 'react-native'
 import { LinkStyles } from './Link.style'
 
 const propTypes = {
   onPress: func.isRequired,
-  text: string
+  children: node
 }
 
-const Link = ({ onPress, text, ...props }) => (
+const Link = ({ onPress, children, ...props }) => (
   <Pressable style={LinkStyles.container} onPress={onPress} {...props}>
     <View>
-      <Text style={LinkStyles.text}>{text}</Text>
+      <Text style={LinkStyles.text}>{children}</Text>
     </View>
   </Pressable>
 )
