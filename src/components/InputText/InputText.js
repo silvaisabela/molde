@@ -1,5 +1,5 @@
 import React from 'react'
-import { func, string, boolean } from 'prop-types'
+import { func, string, bool } from 'prop-types'
 import { Pressable, TextInput, View, Text } from 'react-native'
 import { InputTextStyles } from './InputText.style'
 import { Check, Uncheck, Plus } from '../../../assets/Icons'
@@ -9,8 +9,8 @@ const propTypes = {
   onChange: func,
   value: string,
   placeholder: string,
-  plus: boolean,
-  valid: boolean,
+  plus: bool,
+  valid: bool,
   helperText: string,
   errorMessage: string,
   onClickPlus: func

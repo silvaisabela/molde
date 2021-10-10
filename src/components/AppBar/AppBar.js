@@ -1,6 +1,6 @@
 import React from 'react'
 import { View } from 'react-native'
-import { func, node } from 'prop-types'
+import { func, node, string } from 'prop-types'
 import { AppBarStyle } from './appBar.style'
 import { ButtonOnly, ButtonOnlyType } from '../ButtonOnly'
 
@@ -8,7 +8,7 @@ const LeftType = ButtonOnlyType
 
 const propTypes = {
   onLeftClick: func.isRequired,
-  leftType: LeftType,
+  leftType: string,
   rightIcon: node
 }
 

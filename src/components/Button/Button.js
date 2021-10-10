@@ -1,5 +1,5 @@
 import React from 'react'
-import { func, string, node, boolean } from 'prop-types'
+import { func, string, node, bool } from 'prop-types'
 import { Text, Pressable, View } from 'react-native'
 import { buttonThemes, ButtonStyles } from './Button.style'
 
@@ -8,7 +8,7 @@ const propTypes = {
   children: node,
   type: string,
   icon: node,
-  large: boolean
+  large: bool
 }
 
 const Button = ({
