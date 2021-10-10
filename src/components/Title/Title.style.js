@@ -3,7 +3,7 @@ import theme from '../../styles/theme.style'
 
 const baseTitle = {
   color: theme.fontColor.primary,
-  fontFamily: 'Roboto',
+  fontFamily: 'RobotoBold',
   letterSpacing: theme.letterSpacing.sm
 }
 
