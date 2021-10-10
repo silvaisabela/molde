@@ -1,20 +1,18 @@
-import React from 'react'
-import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, View } from 'react-native'
+import * as React from 'react'
+import { useFonts } from 'expo-font'
+import { Signin } from './src/pages/Signin/Signin'
 
 export default function App () {
+  const [loaded] = useFonts({
+    Roboto: require('./assets/Fonts/Roboto-Regular.ttf'),
+    RobotoBold: require('./assets/Fonts/Roboto-Bold.ttf'),
+    RobotoLight: require('./assets/Fonts/Roboto-Light.ttf')
+  })
+
+  if (!loaded) {
+    return null
+  }
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-    </View >
+      <Signin />
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})

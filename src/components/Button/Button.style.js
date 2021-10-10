@@ -10,7 +10,7 @@ const baseButton = (large) => {
     padding: 12,
     borderRadius: 10,
     elevation: 3,
-    width: large ? window.width : '40%',
+    maxWidth: large ? window.width : '40%',
     height: 42
   }
 }
@@ -24,7 +24,7 @@ const ButtonStyles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   text: {
-    fontSize: theme.fontSize.sm,
+    fontSize: theme.fontSize.md,
     fontWeight: theme.fontWeight.regular,
     letterSpacing: theme.letterSpacing.sm,
     color: theme.fontColor.primary,

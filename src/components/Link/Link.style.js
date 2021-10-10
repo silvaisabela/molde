@@ -7,7 +7,7 @@ const LinkStyles = StyleSheet.create({
     backgroundColor: 'transparent'
   },
   text: {
-    fontSize: theme.fontSize.lg,
+    fontSize: theme.fontSize.md,
     letterSpacing: theme.letterSpacing.sm,
     fontWeight: theme.fontWeight.regular,
     color: theme.fontColor.primary

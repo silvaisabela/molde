@@ -3,7 +3,7 @@ import theme from '../../styles/theme.style'
 
 const baseTitle = {
   color: theme.fontColor.primary,
-  fontFamily: 'Roboto',
+  fontFamily: 'RobotoBold',
   letterSpacing: theme.letterSpacing.sm
 }
 
@@ -33,10 +33,14 @@ const titleSize = {
     fontSize: theme.fontSize.md
   },
   lg: {
-    fontSize: theme.fontSize.md
+    fontSize: theme.fontSize.lg
   },
   xl: {
     fontSize: theme.fontSize.xl
+  },
+  '6xl': {
+    fontSize: theme.fontSize['6xl'],
+    lineHeight: 50
   }
 }
 

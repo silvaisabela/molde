@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 import theme from '../../styles/theme.style'
 
 const baseMessage = {
@@ -6,26 +6,24 @@ const baseMessage = {
   fontWeight: theme.fontWeight.light
 }
 
-const InputTextStyles = StyleSheet.create({
-  container: {
-    paddingLeft: 12,
-    paddingRight: 12,
-    borderRadius: 10,
-    width: 300,
-    height: 42,
-    backgroundColor: theme.color.tertiary
+const window = Dimensions.get('window')
 
-  },
+const InputTextStyles = StyleSheet.create({
   containerInput: {
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    width: '100%',
-    height: '100%'
+    padding: 12,
+    borderRadius: 10,
+    maxWidth: window.width,
+    height: 50,
+    backgroundColor: theme.color.tertiary,
+    marginBottom: 5
   },
   input: {
-    width: '100%',
-    maxWidth: 250,
+    height: '100%',
+    width: '90%',
+    justifyContent: 'center',
     color: theme.fontColor.primary
   },
   error: {
