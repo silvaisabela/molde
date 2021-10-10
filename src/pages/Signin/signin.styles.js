@@ -60,15 +60,6 @@ const SigninStyles = StyleSheet.create({
   },
   containerButton: {
     marginTop: 40
-  },
-  titleDecoration: {
-    position: 'absolute',
-    backgroundColor: theme.color.primary,
-    width: 200,
-    height: 10,
-    left: 0,
-    top: titleDecorationTop,
-    zIndex: -1
   }
 })
 
