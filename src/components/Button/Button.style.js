@@ -10,7 +10,7 @@ const baseButton = (large) => {
     padding: 12,
     borderRadius: 10,
     elevation: 3,
-    width: large ? window.width : '40%',
+    maxWidth: large ? window.width : '40%',
     height: 42
   }
 }
