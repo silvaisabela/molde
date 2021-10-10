@@ -9,6 +9,11 @@ const propTypes = {
   type: string
 }
 
+const ButtonOnlyType = {
+  Back: 'back',
+  Close: 'close'
+}
+
 const ButtonOnly = ({ onPress, type, ...props }) => (
   <Pressable style={ButtonOnlyStyles.button} onPress={onPress} {...props}>
     <View style={ButtonOnlyStyles.container} >
@@ -19,4 +24,4 @@ const ButtonOnly = ({ onPress, type, ...props }) => (
 
 ButtonOnly.propTypes = propTypes
 
-export { ButtonOnly }
+export { ButtonOnly, ButtonOnlyType }
