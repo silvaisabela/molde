@@ -1,3 +1,5 @@
+import { responsiveFontSize } from './font'
+
 export default {
   fontWeight: {
     light: '300',
@@ -5,13 +7,14 @@ export default {
     bold: '700'
   },
   fontSize: {
-    xs: 12,
-    sm: 14,
-    md: 16,
-    lg: 18,
-    xl: 20,
-    '2xl': 22,
-    '3xl': 24
+    xs: responsiveFontSize(12),
+    sm: responsiveFontSize(14),
+    md: responsiveFontSize(16),
+    lg: responsiveFontSize(18),
+    xl: responsiveFontSize(20),
+    '2xl': responsiveFontSize(22),
+    '3xl': responsiveFontSize(24),
+    '6xl': responsiveFontSize(40)
   },
   letterSpacing: {
     xs: 0.3,
@@ -36,5 +39,9 @@ export default {
     secondary: '#7963FF',
     tertiary: '#F4F4F4',
     error: '#DC3838'
+  },
+  backgroungColor: {
+    primary: '#231F20',
+    secondary: '#FFFFFF'
   }
 }
