@@ -24,7 +24,7 @@ const ButtonStyles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   text: {
-    fontSize: theme.fontSize.sm,
+    fontSize: theme.fontSize.md,
     fontWeight: theme.fontWeight.regular,
     letterSpacing: theme.letterSpacing.sm,
     color: theme.fontColor.primary,
