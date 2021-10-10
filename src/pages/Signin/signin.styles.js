@@ -3,8 +3,6 @@ import theme from '../../styles/theme.style'
 
 const window = Dimensions.get('window')
 
-const titleDecorationTop = window.width <= 375 ? 104 : 85
-
 const innerContainerHeight = Platform.OS === 'ios'
   ? window.height - (window.height / 4)
   : window.height - (window.height / 5)
