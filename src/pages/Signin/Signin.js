@@ -27,9 +27,11 @@ const Signin = () => {
         <InputText style={SigninStyles.input} placeholder="Email" />
         <InputPassword placeholder="senha" />
       </View>
-      <Link style={SigninStyles.link}>Esqueci minha senha</Link>
+      <Link style={SigninStyles.link} onPress={() => {}}>
+        Esqueci minha senha
+      </Link>
       <View style={SigninStyles.containerButton}>
-        <Button type="secondary" icon={<ArrowRight />} large>
+        <Button type="secondary" icon={<ArrowRight />} large onPress={() => {}}>
           Entrar
         </Button>
       </View>
