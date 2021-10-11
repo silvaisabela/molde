@@ -18,7 +18,7 @@ const signinLayoutStyles = (scale) => {
     },
     scroll: {
       flexGrow: 1,
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
     },
     container: {
       flex: 1,
@@ -38,7 +38,7 @@ const signinLayoutStyles = (scale) => {
       borderTopLeftRadius: 40,
       borderTopRightRadius: 40,
       padding: 30,
-      zIndex: 2
+      zIndex: 2, 
     }
   })
 }
