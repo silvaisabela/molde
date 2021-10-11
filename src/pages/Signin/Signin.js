@@ -21,16 +21,15 @@ const Signin = () => {
         <Title weight="bold" size="6xl">
           Molde a sua forma de escutar o mundo.
         </Title>
+        <View style={SigninStyles.titleDecoration} />
       </View>
       <View style={SigninStyles.containerInput}>
         <InputText style={SigninStyles.input} placeholder="Email" />
         <InputPassword placeholder="senha" />
       </View>
-      <Link style={SigninStyles.link} onPress={() => {}}>
-        Esqueci minha senha
-      </Link>
+      <Link style={SigninStyles.link}>Esqueci minha senha</Link>
       <View style={SigninStyles.containerButton}>
-        <Button type="secondary" icon={<ArrowRight />} large onPress={() => {}}>
+        <Button type="secondary" icon={<ArrowRight />} large>
           Entrar
         </Button>
       </View>

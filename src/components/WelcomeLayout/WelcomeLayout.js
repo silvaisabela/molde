@@ -8,32 +8,29 @@ import {
 } from 'react-native'
 import { node, func, number } from 'prop-types'
 import { OrganicBackgroung } from '../../../assets/Icons'
-import { signinLayoutStyles } from './signinLayout.style'
-import { AppBar, LeftType } from '../AppBar'
+import { welcomeLayoutStyles } from './welcomeLayout.style'
+import { AppBar } from '../AppBar'
 
 const propTypes = {
   onLeftClick: func.isRequired,
   children: node,
-  leftType: LeftType,
   rightIcon: node,
   scale: number
 }
 
-const SigninLayout = ({ children, leftType, onLeftClick, rightIcon, scale = 4 }) => {
-  const SigninLayoutStyles = signinLayoutStyles(scale)
+const WelcomeLayout = ({ children, rightIcon, scale = 2.5 }) => {
+  const WelcomeLayoutStyles = welcomeLayoutStyles(scale)
   return (
-    <SafeAreaView style={SigninLayoutStyles.safe}>
+    <SafeAreaView style={WelcomeLayoutStyles.safe}>
       <KeyboardAvoidingView
-        style={SigninLayoutStyles.keyboard}
+        style={WelcomeLayoutStyles.keyboard}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         enabled
       >
-        <View style={SigninLayoutStyles.container}>
-          <OrganicBackgroung style={SigninLayoutStyles.backgroundIcon} />
-          <View style={SigninLayoutStyles.innerContainer}>
+        <View style={WelcomeLayoutStyles.container}>
+          <OrganicBackgroung style={WelcomeLayoutStyles.backgroundIcon} />
+          <View style={WelcomeLayoutStyles.innerContainer}>
             <AppBar
-              leftType={leftType}
-              onLeftClick={onLeftClick}
               rightIcon={rightIcon}
             />
             <ScrollView
@@ -49,6 +46,6 @@ const SigninLayout = ({ children, leftType, onLeftClick, rightIcon, scale = 4 })
   )
 }
 
-SigninLayout.propTypes = propTypes
+WelcomeLayout.propTypes = propTypes
 
-export { SigninLayout }
+export { WelcomeLayout }
