@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useFonts } from 'expo-font'
-import { Signin } from './src/pages/Signin/Signin';
+import { Signin } from './src/pages/Signin/Signin'
 import { Welcome } from './src/pages/Welcome/Welcome'
 
 export default function App () {

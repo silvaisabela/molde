@@ -17,7 +17,6 @@ const Welcome = () => {
         <Title weight="bold" size="6xl">
           Molde a sua forma de escutar o mundo.
         </Title>
-        <View style={WelcomeStyles.titleDecoration} />
       </View>
       <View>
       <View style={WelcomeStyles.containerButton}>
