@@ -5,12 +5,13 @@ import { WelcomeStyles } from './welcome.style'
 import { Title } from '../../components/Title'
 import { Link } from '../../components/Link'
 import { Button } from '../../components/Button'
-import { WelcomeLayout } from '../../components/WelcomeLayout/WelcomeLayout'
+import { SigninLayout } from '../../components/SigninLayout/SigninLayout'
 
 const Welcome = () => {
   return (
-    <WelcomeLayout
+    <SigninLayout
       rightIcon={<Logo />}
+      scale={3}
     >
       <View style={WelcomeStyles.containerTitle}>
         <Title weight="bold" size="6xl">
@@ -24,7 +25,7 @@ const Welcome = () => {
         </Button>
       </View>
       <Link style={WelcomeStyles.link}>Já tenho uma conta</Link>
-    </WelcomeLayout>
+    </SigninLayout>
   )
 }
 
