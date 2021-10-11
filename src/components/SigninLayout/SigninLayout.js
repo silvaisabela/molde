@@ -6,15 +6,15 @@ import {
   KeyboardAvoidingView,
   Platform
 } from 'react-native'
-import { node, func, number } from 'prop-types'
+import { node, func, number, string } from 'prop-types'
 import { OrganicBackgroung } from '../../../assets/Icons'
 import { signinLayoutStyles } from './signinLayout.style'
-import { AppBar, LeftType } from '../AppBar'
+import { AppBar } from '../AppBar'
 
 const propTypes = {
   onLeftClick: func.isRequired,
   children: node,
-  leftType: LeftType,
+  leftType: string,
   rightIcon: node,
   scale: number
 }
