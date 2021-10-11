@@ -11,7 +11,7 @@ const Welcome = () => {
   return (
     <SigninLayout
       rightIcon={<Logo />}
-      scale={3}
+      scale={2}
     >
       <View style={WelcomeStyles.containerTitle}>
         <Title weight="bold" size="6xl">
@@ -19,12 +19,14 @@ const Welcome = () => {
         </Title>
         <View style={WelcomeStyles.titleDecoration} />
       </View>
+      <View>
       <View style={WelcomeStyles.containerButton}>
         <Button type="primary" icon={<ArrowRight />} large>
           Vamos começar
         </Button>
       </View>
       <Link style={WelcomeStyles.link}>Já tenho uma conta</Link>
+      </View>
     </SigninLayout>
   )
 }

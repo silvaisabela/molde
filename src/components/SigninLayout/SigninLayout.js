@@ -19,7 +19,7 @@ const propTypes = {
   scale: number
 }
 
-const SigninLayout = ({ children, leftType, onLeftClick, rightIcon, scale = 4 }) => {
+const SigninLayout = ({ children, leftType, onLeftClick, rightIcon, scale = 3.5 }) => {
   const SigninLayoutStyles = signinLayoutStyles(scale)
   return (
     <SafeAreaView style={SigninLayoutStyles.safe}>
