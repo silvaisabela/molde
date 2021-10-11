@@ -6,7 +6,7 @@ import { InputPasswordStyles } from './InputPassword.style'
 
 const propTypes = {
   onPress: func,
-  text: string,
+  placeholder: string,
   errorMessage: string,
   helperText: string
 }
@@ -19,7 +19,7 @@ const InputMessage = (errorMessage, helperText) => {
   return <Text style={InputPasswordStyles.default}>{helperText}</Text>
 }
 
-const InputPassword = ({ text = 'Digite a senha', onPress, helperText, errorMessage, ...props }) => {
+const InputPassword = ({ placeholder, onPress, helperText, errorMessage, ...props }) => {
   const [showPassword, setShowPassword] = useState(false)
 
   const changeShowPassword = () => {
@@ -30,9 +30,10 @@ const InputPassword = ({ text = 'Digite a senha', onPress, helperText, errorMess
     <Pressable>
       <View style={InputPasswordStyles.container}>
         <TextInput
-          placeholder={text}
+          placeholder={placeholder}
           style={InputPasswordStyles.textInput}
           secureTextEntry={showPassword}
+          {...props }
         />
         <Pressable style={InputPasswordStyles.containerIcon} onPress={changeShowPassword}>
           {showPassword ? <EyeClose /> : <EyeOpen />}

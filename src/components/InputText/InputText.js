@@ -66,6 +66,7 @@ const InputText = ({
       <TextInput
         style={InputTextStyles.input}
         placeholder={placeholder}
+        {...props}
       />
       {InputIcon(plus, errorMessage, valid, onClickPlus)}
     </View>
