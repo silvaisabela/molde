@@ -16,6 +16,10 @@ const signinLayoutStyles = (scale) => {
     keyboard: {
       flex: 1
     },
+    scroll: {
+      flexGrow: 1,
+      justifyContent: 'center'
+    },
     container: {
       flex: 1,
       justifyContent: 'flex-end'
