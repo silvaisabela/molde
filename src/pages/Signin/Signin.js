@@ -21,7 +21,6 @@ const Signin = () => {
         <Title weight="bold" size="6xl">
           Molde a sua forma de escutar o mundo.
         </Title>
-        <View style={SigninStyles.titleDecoration} />
       </View>
       <View style={SigninStyles.containerInput}>
         <InputText style={SigninStyles.input} placeholder="Email" />
