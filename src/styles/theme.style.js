@@ -12,8 +12,8 @@ export default {
     md: responsiveFontSize(16),
     lg: responsiveFontSize(18),
     xl: responsiveFontSize(20),
-    '2xl': responsiveFontSize(22),
-    '3xl': responsiveFontSize(24),
+    '2xl': responsiveFontSize(24),
+    '3xl': responsiveFontSize(28),
     '6xl': responsiveFontSize(40)
   },
   letterSpacing: {
