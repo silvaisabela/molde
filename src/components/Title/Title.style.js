@@ -3,22 +3,22 @@ import theme from '../../styles/theme.style'
 
 const baseTitle = {
   color: theme.fontColor.primary,
-  fontFamily: 'RobotoBold',
+  fontFamily: 'RobotoRegular',
   letterSpacing: theme.letterSpacing.sm
 }
 
 const titleWeight = {
   light: {
     ...baseTitle,
-    fontWeight: theme.fontWeight.light
+    fontFamily: 'RobotoLight'
   },
   regular: {
     ...baseTitle,
-    fontWeight: theme.fontWeight.regular
+    fontFamily: 'RobotoRegular'
   },
   bold: {
     ...baseTitle,
-    fontWeight: theme.fontWeight.bold
+    fontFamily: 'RobotoBold'
   }
 }
 
@@ -37,6 +37,14 @@ const titleSize = {
   },
   xl: {
     fontSize: theme.fontSize.xl
+  },
+  '2xl': {
+    fontSize: theme.fontSize['2xl'],
+    lineHeight: 30
+  },
+  '3xl': {
+    fontSize: theme.fontSize['3xl'],
+    lineHeight: 30
   },
   '6xl': {
     fontSize: theme.fontSize['6xl'],
