@@ -9,7 +9,8 @@ const addPhrase = () => {
   }
   
   const onPress = () => {
-    frases.push(text)
+    if(text != '')
+      frases.push(text)
     console.log(frases)
   }
   return { onPress, handleChangeText, frases }
