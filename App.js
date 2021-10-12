@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useFonts } from 'expo-font'
 import { Signin } from './src/pages/Signin/Signin'
+import { RegisterPhrase } from './src/pages/RegisterPhrase/RegisterPhrase'
 
 export default function App () {
   const [loaded] = useFonts({
@@ -13,6 +14,6 @@ export default function App () {
     return null
   }
   return (
-      <Signin />
+      <RegisterPhrase />
   )
 }
