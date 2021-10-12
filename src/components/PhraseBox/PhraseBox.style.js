@@ -11,7 +11,9 @@ const PhraseBoxStyles = StyleSheet.create({
     padding: 12,
     borderWidth: 1,
     borderColor: theme.backgroungColor.primary,
-    borderRadius: 50
+    borderRadius: 50,
+    marginTop: 5,
+    marginRight: 5
   },
   text: {
     fontSize: theme.fontSize.md,

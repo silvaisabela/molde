@@ -47,7 +47,9 @@ const RegisterPhrase = () => {
             onChangeText={handleChangeText}
           />
         </View>
+        <View style={RegisterPhraseStyles.containerPhrases}> 
         {frases.map((frase) => <PhraseBox key={frase}> {frase} </PhraseBox>)}
+        </View>
       </View>
     </SignupLayout>
   )

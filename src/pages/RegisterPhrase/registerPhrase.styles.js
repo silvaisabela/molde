@@ -9,6 +9,10 @@ const RegisterPhraseStyles = StyleSheet.create({
   },
   containerButton: {
     alignSelf: 'flex-end'
+  },
+  containerPhrases: {
+    flexDirection: 'row',
+    flexWrap: 'wrap'
   }
 })
 
