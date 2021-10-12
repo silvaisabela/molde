@@ -1,15 +1,18 @@
 import { useState } from 'react'
 
-const useRegisterPhrase = () => {
-  const [isValid, setIsValid] = useState(false)
+const addPhrase = () => {
   const [text, setText] = useState('')
+  const [frases, setFrases] = useState([]);
 
   const handleChangeText = (value) => {
-    setIsValid(value.length >= 2)
     setText(value)
   }
-
-  return { handleChangeText, isValid, text }
+  
+  const onPress = () => {
+    frases.push(text)
+    console.log(frases)
+  }
+  return { onPress, handleChangeText, frases }
 }
 
-export { useRegisterPhrase }
+export { addPhrase }

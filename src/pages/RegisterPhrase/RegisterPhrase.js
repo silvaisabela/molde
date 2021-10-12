@@ -7,22 +7,25 @@ import { Title } from '../../components/Title'
 import { InputText } from '../../components/InputText'
 import { Button } from '../../components/Button'
 import { SignupLayout } from '../../components/SignupLayout'
-import { useRegisterPhrase } from './useRegisterPhrase'
+import { addPhrase } from './useRegisterPhrase'
 import { PhraseBox } from '../../components/PhraseBox/PhraseBox'
 
+
 const RegisterPhrase = () => {
+
   const {
+    onPress,
     handleChangeText,
-    isValid,
-    text
-  } = useRegisterPhrase()
+    text,
+    frases
+  } = addPhrase()
 
   return (
     <SignupLayout
       leftType={LeftType.Close}
       onLeftClick={() => {}}
       action={
-        isValid && (
+        (frases.length > 0) && (
           <View style={RegisterPhraseStyles.containerButton}>
             <Button icon={<Arrow />} onPress={() => {}}>
               Continuar
@@ -39,9 +42,12 @@ const RegisterPhrase = () => {
           <InputText
             placeholder="Ex: Bom dia, Cheguei"
             plus
+            value={text}
+            onClickPlus={onPress}
+            onChangeText={handleChangeText}
           />
         </View>
-        <PhraseBox> Bom dia </PhraseBox>
+        {frases.map((frase) => <PhraseBox key={frase}> {frase} </PhraseBox>)}
       </View>
     </SignupLayout>
   )
