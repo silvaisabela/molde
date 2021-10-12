@@ -8,6 +8,7 @@ import { InputText } from '../../components/InputText'
 import { Button } from '../../components/Button'
 import { SignupLayout } from '../../components/SignupLayout'
 import { useRegisterPhrase } from './useRegisterPhrase'
+import { PhraseBox } from '../../components/PhraseBox/PhraseBox'
 
 const RegisterPhrase = () => {
   const {
@@ -40,6 +41,7 @@ const RegisterPhrase = () => {
             plus
           />
         </View>
+        <PhraseBox> Bom dia </PhraseBox>
       </View>
     </SignupLayout>
   )
