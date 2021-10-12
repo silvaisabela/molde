@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react'
 import { number, string } from 'prop-types'
 import Svg, { Path } from 'react-native-svg'
 
@@ -8,7 +8,7 @@ const propTypes = {
   color: string
 }
 
-const Delete = ({width = 12, height = 13, color = '#231F20', ...props}) => {
+const Delete = ({ width = 12, height = 13, color = '#231F20', ...props }) => {
   return (
     <Svg
       width={width}
@@ -29,4 +29,3 @@ const Delete = ({width = 12, height = 13, color = '#231F20', ...props}) => {
 Delete.propTypes = propTypes
 
 export { Delete }
-

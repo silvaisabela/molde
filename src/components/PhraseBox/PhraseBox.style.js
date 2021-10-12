@@ -6,12 +6,12 @@ const PhraseBoxStyles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    alignSelf:"flex-start",
+    alignSelf: 'flex-start',
     height: 30,
     padding: 12,
     borderWidth: 1,
     borderColor: theme.backgroungColor.primary,
-    borderRadius: 50,
+    borderRadius: 50
   },
   text: {
     fontSize: theme.fontSize.md,
