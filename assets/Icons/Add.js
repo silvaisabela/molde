@@ -1,11 +1,11 @@
 import * as React from 'react'
-import { Number, String } from 'prop-types'
+import { number, string } from 'prop-types'
 import Svg, { Path } from 'react-native-svg'
 
 const propTypes = {
-  width: Number,
-  height: Number,
-  color: String
+  width: number,
+  height: number,
+  color: string
 }
 
 const Add = ({ width = 29, height = 29, color = '#7963FF', ...props }) => {

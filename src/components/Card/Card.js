@@ -1,13 +1,13 @@
 import React from 'react'
-import { func, String, node } from 'prop-types'
+import { func, string, node } from 'prop-types'
 import { Pressable, View } from 'react-native'
 import { CardStyles } from './Card.style'
 import { Add, PurpleShape, YellowShape } from '../../../assets/Icons'
 
 const propTypes = {
   onPress: func,
-  size: String,
-  icon: String,
+  size: string,
+  icon: string,
   children: node
 }
 
