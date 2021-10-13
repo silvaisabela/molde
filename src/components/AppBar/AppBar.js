@@ -7,7 +7,7 @@ import { ButtonOnly, ButtonOnlyType } from '../ButtonOnly'
 const LeftType = ButtonOnlyType
 
 const propTypes = {
-  onLeftClick: func.isRequired,
+  onLeftClick: func,
   leftType: string,
   rightIcon: node
 }

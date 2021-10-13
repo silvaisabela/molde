@@ -25,7 +25,8 @@ const InputPasswordStyles = StyleSheet.create({
     height: '100%',
     width: '90%',
     justifyContent: 'center',
-    color: theme.fontColor.primary
+    color: theme.fontColor.primary,
+    backgroundColor: 'pink'
   },
   error: {
     ...baseMessage,

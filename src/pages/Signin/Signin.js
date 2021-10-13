@@ -22,17 +22,22 @@ const Signin = () => {
           Molde a sua forma de escutar o mundo.
         </Title>
       </View>
-      <View style={SigninStyles.containerInput}>
-        <InputText style={SigninStyles.input} placeholder="Email" />
-        <InputPassword placeholder="senha" />
-      </View>
-      <Link style={SigninStyles.link} onPress={() => {}}>
-        Esqueci minha senha
-      </Link>
-      <View style={SigninStyles.containerButton}>
-        <Button type="secondary" icon={<ArrowRight />} large onPress={() => {}}>
-          Entrar
-        </Button>
+        <View style={SigninStyles.containerInput}>
+          <InputText style={SigninStyles.input} placeholder="Email" />
+          <InputPassword placeholder="senha" />
+        </View>
+        <Link style={SigninStyles.link} onPress={() => {}}>
+          Esqueci minha senha
+        </Link>
+        <View style={SigninStyles.containerButton}>
+          <Button
+            type="secondary"
+            icon={<ArrowRight />}
+            large
+            onPress={() => {}}
+          >
+            Entrar
+          </Button>
       </View>
     </SigninLayout>
   )

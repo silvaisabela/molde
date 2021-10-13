@@ -12,7 +12,7 @@ import { signinLayoutStyles } from './signinLayout.style'
 import { AppBar } from '../AppBar'
 
 const propTypes = {
-  onLeftClick: func.isRequired,
+  onLeftClick: func,
   children: node,
   leftType: string,
   rightIcon: node,
@@ -37,6 +37,7 @@ const SigninLayout = ({ children, leftType, onLeftClick, rightIcon, scale = 4 })
               rightIcon={rightIcon}
             />
             <ScrollView
+            contentContainerStyle={SigninLayoutStyles.scroll}
               showsVerticalScrollIndicator={false}
               persistentScrollbar={false}
             >
