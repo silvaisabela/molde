@@ -42,8 +42,7 @@ const SigninStyles = StyleSheet.create({
   },
   containerTitle: {
     width: 220,
-    marginTop: 50,
-    alignSelf: 'flex-start'
+    marginTop: 50
   },
   containerInput: {
     marginTop: 42,

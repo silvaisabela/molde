@@ -13,7 +13,8 @@ const propTypes = {
   valid: bool,
   helperText: string,
   errorMessage: string,
-  onClickPlus: func
+  onClickPlus: func,
+  onChangeText: func
 }
 
 const InputIcon = (plus, errorMessage, valid, onClick) => {
@@ -59,14 +60,16 @@ const InputText = ({
   helperText,
   errorMessage,
   onClickPlus,
-  ...props
+  value,
+  onChangeText
 }) => (
   <Pressable>
     <View style={InputTextStyles.containerInput}>
       <TextInput
         style={InputTextStyles.input}
         placeholder={placeholder}
-        {...props}
+        value={value}
+        onChangeText={onChangeText}
       />
       {InputIcon(plus, errorMessage, valid, onClickPlus)}
     </View>
