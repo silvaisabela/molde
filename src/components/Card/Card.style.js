@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native'
 import theme from '../../styles/theme.style'
 
 const baseCard = {
-  backgroundColor: theme.color.black,
+  backgroundColor: theme.fontColor.primary,
   borderRadius: 10,
   elevation: 3,
   height: 114,
