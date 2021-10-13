@@ -12,7 +12,7 @@ import { signinLayoutStyles } from './signinLayout.style'
 import { AppBar } from '../AppBar'
 
 const propTypes = {
-  onLeftClick: func.isRequired,
+  onLeftClick: func,
   children: node,
   leftType: string,
   rightIcon: node,

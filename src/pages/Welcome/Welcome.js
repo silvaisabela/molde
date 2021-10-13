@@ -20,11 +20,11 @@ const Welcome = () => {
       </View>
       <View>
       <View style={WelcomeStyles.containerButton}>
-        <Button type="primary" icon={<ArrowRight />} large>
+        <Button type="primary" icon={<ArrowRight />} large onPress={() => {}}>
           Vamos começar
         </Button>
       </View>
-      <Link style={WelcomeStyles.link}>Já tenho uma conta</Link>
+      <Link style={WelcomeStyles.link} onPress={() => {}}>Já tenho uma conta</Link>
       </View>
     </SigninLayout>
   )
