@@ -42,7 +42,6 @@ export default {
   },
   backgroungColor: {
     primary: '#231F20',
-    secondary: '#FFFFFF',
-    tertiary: '#979797'
+    secondary: '#FFFFFF'
   }
 }
