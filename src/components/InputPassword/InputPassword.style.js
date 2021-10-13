@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 import theme from '../../styles/theme.style'
 
 const baseMessage = {
@@ -7,6 +7,8 @@ const baseMessage = {
 
 }
 
+const window = Dimensions.get('window')
+
 const InputPasswordStyles = StyleSheet.create({
   container: {
     alignItems: 'center',
@@ -14,16 +16,17 @@ const InputPasswordStyles = StyleSheet.create({
     justifyContent: 'space-between',
     padding: 12,
     borderRadius: 10,
-    width: 300,
-    height: 42,
+    maxWidth: window.width,
+    height: 50,
     backgroundColor: theme.color.tertiary,
     marginBottom: 5
   },
   textInput: {
     height: '100%',
-    width: 240,
+    width: '90%',
     justifyContent: 'center',
-    color: theme.fontColor.primary
+    color: theme.fontColor.primary,
+    backgroundColor: 'pink'
   },
   error: {
     ...baseMessage,

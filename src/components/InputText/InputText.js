@@ -1,6 +1,6 @@
 import React from 'react'
-import { func, string, boolean } from 'prop-types'
-import { Pressable, TextInput as Input, View, Text } from 'react-native'
+import { func, string, bool } from 'prop-types'
+import { Pressable, TextInput, View, Text } from 'react-native'
 import { InputTextStyles } from './InputText.style'
 import { Check, Uncheck, Plus } from '../../../assets/Icons'
 import theme from '../../styles/theme.style'
@@ -9,11 +9,12 @@ const propTypes = {
   onChange: func,
   value: string,
   placeholder: string,
-  plus: boolean,
-  valid: boolean,
+  plus: bool,
+  valid: bool,
   helperText: string,
   errorMessage: string,
-  onClickPlus: func
+  onClickPlus: func,
+  onChangeText: func
 }
 
 const InputIcon = (plus, errorMessage, valid, onClick) => {
@@ -59,24 +60,24 @@ const InputText = ({
   helperText,
   errorMessage,
   onClickPlus,
-  ...props
+  value,
+  onChangeText
 }) => (
-  <View>
-    <View style={InputTextStyles.container}>
-      <View style={InputTextStyles.containerInput}>
-        <Input
-          style={InputTextStyles.input}
-          placeholder={placeholder}
-          {...props}
-        />
-        {InputIcon(plus, errorMessage, valid, onClickPlus)}
-      </View>
+  <Pressable>
+    <View style={InputTextStyles.containerInput}>
+      <TextInput
+        style={InputTextStyles.input}
+        placeholder={placeholder}
+        value={value}
+        onChangeText={onChangeText}
+      />
+      {InputIcon(plus, errorMessage, valid, onClickPlus)}
     </View>
 
     {(helperText || errorMessage) && (
       <View>{InputMessage(errorMessage, helperText)}</View>
     )}
-  </View>
+  </Pressable>
 )
 
 InputText.propTypes = propTypes
