@@ -37,6 +37,7 @@ const SigninLayout = ({ children, leftType, onLeftClick, rightIcon, scale = 4 })
               rightIcon={rightIcon}
             />
             <ScrollView
+            contentContainerStyle={SigninLayoutStyles.scroll}
               showsVerticalScrollIndicator={false}
               persistentScrollbar={false}
             >

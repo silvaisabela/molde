@@ -48,7 +48,7 @@ const titleSize = {
   },
   '6xl': {
     fontSize: theme.fontSize['6xl'],
-    lineHeight: 50
+    lineHeight: theme.fontSize['6xl'] * 1.2
   }
 }
 
